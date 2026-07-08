@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acelera TCC | O Guia Definitivo de Prompts Acadêmicos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(51, 65, 85, 0.4); }
+        .neon-border { position: relative; }
+        .neon-border::after { content: ''; position: absolute; inset: -1px; background: linear-gradient(45deg, #22d3ee, #8b5cf6); z-index: -1; border-radius: 1rem; opacity: 0.4; filter: blur(6px); }
+        .animate-pulse-slow { animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.95; transform: scale(1.02); } }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased overflow-x-hidden">
+
+<!-- 1ª SEÇÃO: HERO (LAYOUT ASSIMÉTRICO COM ESPAÇO PARA BANNER) -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-32 overflow-hidden">
+        <!-- Efeitos de Luz de Fundo (Glow) -->
+        <div class="absolute top-0 left-1/4 w-[800px] h-[500px] bg-cyan-500/10 blur-[120px] rounded-full"></div>
+        <div class="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-violet-600/10 blur-[120px] rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto z-10 w-full">
+            <!-- Grid de 12 colunas: 7 para texto, 5 para banner -->
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- LADO ESQUERDO: TEXTO (7 COLUNAS) -->
+                <div class="text-left order-2 lg:order-1 lg:col-span-8">
+
+                    <h1 class="text-4xl md:text-5xl xl:text-7xl font-extrabold tracking-tight mb-8 leading-[1.05] uppercase">
+                        DESTRAVE SEU TCC EM <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-500">48 HORAS</span> COM IA.
+                    </h1>
+                    <p class="text-lg md:text-2xl text-slate-400 max-w-2xl mb-0 leading-relaxed">
+                        Chega de encarar a folha em branco ou depender de geradores genéricos. Domine o manual definitivo de IA para transformar meses de angústia em dias de escrita fluida, ética e blindada.
+                    </p>
+                </div>
+
+                <!-- LADO DIREITO: BANNER (5 COLUNAS) -->
+                <div class="relative order-1 lg:order-2 lg:col-span-4 animate-float">
+                    <!-- Brilho Neon Atrás da Imagem -->
+                    <div class="absolute -inset-4 bg-gradient-to-r from-cyan-500/30 to-violet-500/30 blur-3xl opacity-50"></div>
+                    
+                    <!-- Container do Banner -->
+                    <div class="relative neon-border overflow-hidden rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl">
+
+                        <img 
+                            src="./mockup.png" 
+                            alt="Mockup Acelera TCC" 
+                            class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                        />
+                        
+                        <!-- Overlay de brilho sutil sobre a imagem -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTÃO CENTRALIZADO ABAIXO (OCUPANDO OS DOIS LADOS) -->
+            <div class="mt-16 lg:mt-24 flex flex-col items-center">
+                <a href="#oferta" class="w-full max-w-5xl py-6 bg-gradient-to-r from-cyan-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500 text-white font-black text-xl md:text-3xl rounded-2xl transition-all transform hover:scale-[1.01] shadow-[0_0_40px_rgba(34,211,238,0.3)] uppercase tracking-tight text-center animate-pulse-slow">
+                    Quero Acelerar Meu TCC Agora
+                </a>
+                
+                <!-- Selos de Confiança -->
+                <div class="mt-8 flex flex-wrap justify-center gap-6 md:gap-12 opacity-40">
+                    <div class="flex items-center gap-2">
+                        <span class="text-cyan-400 text-sm">✔</span>
+                        <span class="text-[10px] md:text-xs uppercase font-bold tracking-[0.15em]">Acesso Imediato</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-cyan-400 text-sm">✔</span>
+                        <span class="text-[10px] md:text-xs uppercase font-bold tracking-[0.15em]">Garantia 7 Dias</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-cyan-400 text-sm">✔</span>
+                        <span class="text-[10px] md:text-xs uppercase font-bold tracking-[0.15em]">Pagamento Seguro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- [ AS DEMAIS SEÇÕES CONTINUAM IGUAIS AO CÓDIGO ANTERIOR ] -->
+    <!-- ... -->
+
+    <script>
+        function startTimer(duration, display) {
+            let timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                if (display) display.textContent = minutes + ":" + seconds;
+                if (--timer < 0) { timer = duration; }
+            }, 1000);
+        }
+        window.onload = function () {
+            let fifteenMinutes = 60 * 15, display = document.querySelector('#countdown');
+            startTimer(fifteenMinutes, display);
+        };
+    </script>
+
+    <section class="py-24 px-4 bg-slate-900/20 border-y border-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black mb-4 uppercase tracking-tight">O Cronograma da sua Aprovação por Dentro</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-base">Um manual estratégico estruturado em formato "Copia e Cola" dividindo o seu desenvolvimento em etapas blindadas contra falhas.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-2xl border-l-4 border-l-cyan-400">
+                    <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase block mb-2">Módulo 1 // 20 Prompts</span>
+                    <h3 class="text-xl font-bold mb-3 text-white">Concepção e Estrutura</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Saia do zero absoluto. Prompts para delimitação temática com variáveis de alta precisão, criação de ganchos de impacto e estruturação de objetivos gerais e específicos.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl border-l-4 border-l-violet-500">
+                    <span class="text-xs font-bold text-violet-400 tracking-wider uppercase block mb-2">Módulo 2 // 25 Prompts</span>
+                    <h3 class="text-xl font-bold mb-3 text-white">Revisão de Literatura</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Mapeie o estado da arte. Comandos avançados para extrair insights cirúrgicos de PDFs longos, simplificar conceitos complexos e criar matrizes de confronto teórico.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl border-l-4 border-l-cyan-400">
+                    <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase block mb-2">Módulo 3 // 30 Prompts</span>
+                    <h3 class="text-xl font-bold mb-3 text-white">Escrita Coesa de Capítulos</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Desenvolvimento textual acelerado. Técnicas de roteirização de subtópicos, ganchos perfeitos de transição entre parágrafos e preenchimento estrutural em formato funil.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl border-l-4 border-l-violet-500">
+                    <span class="text-xs font-bold text-violet-400 tracking-wider uppercase block mb-2">Módulo 4 // 15 Prompts</span>
+                    <h3 class="text-xl font-bold mb-3 text-white">Metodologia e Ética</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Desenho metodológico sem erros. Estruturação automática de abordagens qualitativas/quantitativas, critérios de amostragem e termos de consentimento formais.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl border-l-4 border-l-cyan-400">
+                    <span class="text-xs font-bold text-cyan-400 tracking-wider uppercase block mb-2">Módulo 5 // 15 Prompts</span>
+                    <h3 class="text-xl font-bold mb-3 text-white">Resultados e Análise</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Apresentação densa de dados. Modelos de leitura crítica de padrões, interpretação correta de jargões estatísticos e direcionamento analítico para a criação de gráficos.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl border-l-4 border-l-violet-500">
+                    <span class="text-xs font-bold text-violet-400 tracking-wider uppercase block mb-2">Módulo 6 // 15 Prompts</span>
+                    <h3 class="text-xl font-bold mb-3 text-white">Lapidação e Antiplágio</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Revisão final sênior. Técnicas sofisticadas de paráfrase (conversão de citações diretas para indiretas), ajuste cirúrgico de tom formal e eliminação de similaridades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-8 uppercase leading-tight">Chega de perder semanas travado na <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400">página em branco.</span></h2>
+                <ul class="space-y-6 text-slate-300">
+                    <li class="flex items-start gap-4">
+                        <div class="mt-1 flex items-center justify-center w-5 h-5 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-bold">✓</div>
+                        <p><strong class="text-white">Economia de +100 Horas:</strong> Reduza drasticamente o tempo de pesquisa operacional e vá direto para o que importa.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="mt-1 flex items-center justify-center w-5 h-5 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-bold">✓</div>
+                        <p><strong class="text-white">Rigor Científico Intacto:</strong> Comandos calibrados sob a ótica de orientadores e revisores, mantendo a densidade teórica exigida.</p>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="mt-1 flex items-center justify-center w-5 h-5 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-bold">✓</div>
+                        <p><strong class="text-white">Ética e Coautoria Segura:</strong> Instruções claras de validação metodológica para usar a IA como seu copiloto legítimo, mantendo a integridade intelectual.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-gradient-to-br from-cyan-500/20 to-violet-500/20 p-0.5 rounded-3xl">
+                <div class="bg-slate-950 p-8 rounded-[1.4rem] border border-slate-900 relative">
+                    <p class="text-slate-400 italic mb-6 leading-relaxed">"O maior erro do estudante é tratar ferramentas de IA como simples caixas de busca de texto. O segredo está na engenharia sênior de comandos."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-cyan-500 to-violet-600"></div>
+                        <div>
+                            <p class="font-bold text-white uppercase text-xs tracking-wider">Bruno Flores</p>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-widest">Professor que orientou mais de 50 TCCs nota 10.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 bg-slate-900/10 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <span class="text-cyan-400 text-xs font-bold tracking-widest uppercase">Aceleração Máxima</span>
+            <h2 class="text-3xl md:text-4xl font-black mt-2 uppercase">Bônus Exclusivos de Lançamento</h2>
+            <p class="text-slate-400 mt-2">Ganta o acesso hoje e leve o ecossistema estratégico complementar sem custo adicional.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="glass p-6 rounded-xl border-t-2 border-t-cyan-400">
+                <h4 class="text-cyan-400 font-bold text-[10px] uppercase mb-1">Bônus 01 // Incluso</h4>
+                <h3 class="text-lg font-bold mb-3 text-white leading-tight">Checklist de Formatação ABNT via IA</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Esqueça a dor de cabeça com margens e citações. Aprenda a programar comandos para auditar e automatizar sua conferência de formatação.</p>
+            </div>
+            <div class="glass p-6 rounded-xl border-t-2 border-t-violet-500">
+                <h4 class="text-violet-400 font-bold text-[10px] uppercase mb-1">Bônus 02 // Incluso</h4>
+                <h3 class="text-lg font-bold mb-3 text-white leading-tight">O Guia Prático Anti-Plágio</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Técnicas avançadas de humanização textual e refatoração para validar sua escrita e garantir 0% de similaridade inadequada em softwares de varredura.</p>
+            </div>
+            <div class="glass p-6 rounded-xl border-t-2 border-t-cyan-400">
+                <h4 class="text-cyan-400 font-bold text-[10px] uppercase mb-1">Bônus 03 //  Incluso</h4>
+                <h3 class="text-lg font-bold mb-3 text-white leading-tight">Script de Preparação para a Banca</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">Roteiros e simulações de perguntas agressivas da banca avaliadora. Prepare sua apresentação e antecipe todas as defesas de forma cirúrgica.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="oferta" class="py-24 px-4 relative">
+        <div class="max-w-3xl mx-auto text-center glass p-10 md:p-14 rounded-3xl border border-cyan-500/30 shadow-[0_0_50px_rgba(34,211,238,0.1)]">
+            <h2 class="text-sm font-bold mb-2 uppercase tracking-widest text-cyan-400">Acesso Instantâneo e Vitalício</h2>
+            <div class="flex items-center justify-center gap-4 mb-6 mt-4">
+                <span class="text-slate-500 line-through text-lg">R$ 64,90</span>
+            </div>
+            <div class="text-6xl md:text-8xl font-black text-white mb-6 tracking-tighter">
+                <span class="text-2xl md:text-3xl font-bold align-top mr-1">6 x de</span><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400">R$ 3,75</span>
+            </div>
+            <p class="text-base text-slate-300 mb-10">Ou apenas <span class="text-cyan-400 font-bold">R$ 14,90 à vista</span> no PIX ou Cartão.</p>
+            
+            <a href="#" class="block w-full py-5 bg-gradient-to-r from-cyan-500 to-violet-600 text-white font-extrabold text-xl rounded-2xl animate-pulse-slow shadow-lg hover:shadow-cyan-500/40 transition-all uppercase tracking-tight mb-8">
+                Quero Garantir Minha Cópia do Guia
+            </a>
+
+            <div class="flex flex-col items-center gap-1">
+                <p class="text-[10px] uppercase tracking-widest text-slate-500">Esta oferta especial expira em:</p>
+                <div id="countdown" class="text-2xl font-mono font-bold text-violet-400 tracking-wider">15:15</div>
+            </div>
+        </div>
+    </section>
+
+<section class="py-24 px-4 bg-slate-900/10 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-center text-2xl md:text-4xl font-black mb-12 uppercase tracking-tight">Dê uma Espiada por Dentro do Guia</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    
+                <div class="relative aspect-[3/4] bg-slate-900 rounded-xl border border-slate-800 overflow-hidden group">
+                    <img src="./pagina1.png" alt="Estrutura do Comandante" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-0 inset-x-0 p-3 text-center z-10">
+                        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Página 1</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[3/4] bg-slate-900 rounded-xl border border-slate-800 overflow-hidden group">
+                    <img src="./pagina6.png" alt="Blocos de Alerta Prático" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-0 inset-x-0 p-3 text-center z-10">
+                        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Página 6</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[3/4] bg-slate-900 rounded-xl border border-slate-800 overflow-hidden group">
+                    <img src="./pagina8.png" alt="Campos Copia e Cola" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-0 inset-x-0 p-3 text-center z-10">
+                        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Página 8</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[3/4] bg-slate-900 rounded-xl border border-slate-800 overflow-hidden group">
+                    <img src="./pagina12.png" alt="Exemplos Metodológicos" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-0 inset-x-0 p-3 text-center z-10">
+                        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Página 12</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[3/4] bg-slate-900 rounded-xl border border-slate-800 overflow-hidden group">
+                    <img src="./pagina19.png" alt="Lapidação de Similaridade" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-0 inset-x-0 p-3 text-center z-10">
+                        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Página 19</p>
+                    </div>
+                </div>
+
+                <div class="relative aspect-[3/4] bg-slate-900 rounded-xl border border-slate-800 overflow-hidden group">
+                    <img src="./pagina30.png" alt="Lapidação de Similaridade" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-0 inset-x-0 p-3 text-center z-10">
+                        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Página 30</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tight">Quem já usa, aprova o método</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-2xl">
+                    <div class="flex text-cyan-400 mb-4 text-xs tracking-widest">★★★★★</div>
+                    <p class="text-sm text-slate-300 italic mb-6 leading-relaxed">"Eu estava travada há 3 meses no referencial teórico. Com as engenharizações de prompts do Módulo 2 consegui cruzar os autores sem nenhuma dor de cabeça e montei o capítulo inteiro em um fim de semana."</p>
+                    <p class="font-bold text-white text-sm uppercase tracking-wide">— Mariana S., Graduanda de Direito</p>
+                </div>
+                <div class="glass p-8 rounded-2xl">
+                    <div class="flex text-cyan-400 mb-4 text-xs tracking-widest">★★★★★</div>
+                    <p class="text-sm text-slate-300 italic mb-6 leading-relaxed">"O bônus de anti-plágio e humanização de escrita vale o preço do e-book sozinho. Me deu a segurança necessária para submeter o relatório sem medo de falsos positivos nos softwares da faculdade."</p>
+                    <p class="font-bold text-white text-sm uppercase tracking-wide">— Ricardo M., Engenharia de Produção</p>
+                </div>
+                <div class="glass p-8 rounded-2xl">
+                    <div class="flex text-cyan-400 mb-4 text-xs tracking-widest">★★★★★</div>
+                    <p class="text-sm text-slate-300 italic mb-6 leading-relaxed">"Faltavam pouquíssimos dias para o encerramento do prazo de entrega e eu não tinha nem os objetivos estruturados. Esse manual salvou meu semestre e meu diploma. Didática cirúrgica."</p>
+                    <p class="font-bold text-white text-sm uppercase tracking-wide">— Lucas F., Administração de Empresas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-slate-900/20 border-t border-slate-900">
+        <div class="max-w-4xl mx-auto glass p-8 md:p-12 rounded-3xl flex flex-col md:flex-row items-center gap-8 border-l-4 border-l-cyan-400">
+            <div class="w-24 h-24 bg-cyan-500/10 border border-cyan-500/30 rounded-full flex items-center justify-center flex-shrink-0 text-cyan-400 font-extrabold text-3xl">7d</div>
+            <div>
+                <h3 class="text-xl font-bold mb-2 uppercase text-white tracking-wide">Garantia Incondicional de Risco Zero</h3>
+                <p class="text-sm text-slate-400 leading-relaxed">Fique 100% satisfeito ou peça seu dinheiro de volta. Você tem 7 dias inteiros para abrir o manual, copiar os comandos e aplicar no seu TCC. Se você achar que o método não serve para você, devolvemos cada centavo investido. Sem burocracias.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-center text-2xl md:text-4xl font-black mb-12 uppercase tracking-tight">Perguntas Frequentes</h2>
+            <div class="space-y-4">
+                <div class="glass p-5 rounded-xl">
+                    <h4 class="font-bold text-white text-sm mb-2">1. O material serve para qualquer área de graduação ou curso?</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Sim. Os prompts foram desenhados com estruturas baseadas em variáveis adaptáveis. Eles funcionam injetando os seus dados e o seu tema, independentemente de ser área de Humanas, Biológicas ou Exatas.</p>
+                </div>
+                <div class="glass p-5 rounded-xl">
+                    <h4 class="font-bold text-white text-sm mb-2">2. Usar esses prompts estruturados pode ser considerado plágio?</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Não. O guia foca em engenharia de coautoria ética. Você aprenderá a direcionar a IA para organizar ideias, estruturar fluxos e revisar textos sob o seu comando intelectual crítico, eliminando qualquer cópia mecânica direta.</p>
+                </div>
+                <div class="glass p-5 rounded-xl">
+                    <h4 class="font-bold text-white text-sm mb-2">3. Eu preciso ter a versão paga de ferramentas como o ChatGPT?</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Não é obrigatório. Os comandos rodam perfeitamente nos modelos gratuitos modernos do ChatGPT, Claude ou Google Gemini, aproveitando o máximo da capacidade das linguagens nativas.</p>
+                </div>
+                <div class="glass p-5 rounded-xl">
+                    <h4 class="font-bold text-white text-sm mb-2">4. Como e quando eu recebo o produto após a compra?</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">O envio é imediato e 100% digital. Assim que o pagamento for confirmado (via PIX ou Cartão), os dados de acesso e o link de download direto do PDF serão enviados no seu e-mail cadastrado.</p>
+                </div>
+                <div class="glass p-5 rounded-xl">
+                    <h4 class="font-bold text-white text-sm mb-2">5. O que acontece se eu tiver dúvidas ao longo do caminho?</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">O manual é totalmente explicativo e conta com marcações visuais de 'Dicas' e 'Alertas' de engenharia, pensados exatamente para blindar você contra erros interpretativos comuns da inteligência artificial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 px-4 border-t border-slate-900 text-center text-xs text-slate-500">
+        <p class="uppercase tracking-wider font-semibold">&copy; 2026 Acelera TCC. Todos os direitos reservados.</p>
+        <p class="mt-2 text-[10px] text-slate-600 max-w-xl mx-auto leading-relaxed">As ferramentas de inteligência artificial devem ser aplicadas como suportes metodológicos. O conteúdo intelectual final e as validações científicas são de inteira responsabilidade do estudante autor.</p>
+    </footer>
+
+    <script>
+        function startTimer(duration, display) {
+            let timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration; // Reseta o timer ao chegar em zero para não quebrar o layout
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            let fifteenMinutes = 60 * 15,
+                display = document.querySelector('#countdown');
+            startTimer(fifteenMinutes, display);
+        };
+    </script>
+</body>
+</html>
