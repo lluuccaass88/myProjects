@@ -212,12 +212,18 @@
             <div class="flex items-center justify-center gap-4 mb-6 mt-4">
                 <span class="text-slate-500 line-through text-lg">R$ 64,90</span>
             </div>
-            <div class="text-6xl md:text-8xl font-black text-white mb-6 tracking-tighter">
-                <span class="text-2xl md:text-3xl font-bold align-top mr-1">6 x de</span><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400">R$ 3,75</span>
+            <div class="flex justify-center items-start gap-2 mb-6">
+                <span class="text-xl md:text-2xl font-semibold text-slate-200 mt-3">
+                    3 x de
+                </span>
+
+                <span class="text-6xl md:text-8xl font-black tracking-tighter leading-none text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400">
+                    R$ 5,32
+                </span>
             </div>
             <p class="text-base text-slate-300 mb-10">Ou apenas <span class="text-cyan-400 font-bold">R$ 14,90 à vista</span> no PIX ou Cartão.</p>
             
-            <a href="#" class="block w-full py-5 bg-gradient-to-r from-cyan-500 to-violet-600 text-white font-extrabold text-xl rounded-2xl animate-pulse-slow shadow-lg hover:shadow-cyan-500/40 transition-all uppercase tracking-tight mb-8">
+            <a href="https://pay.kiwify.com.br/0KS5GZU" class="block w-full py-5 bg-gradient-to-r from-cyan-500 to-violet-600 text-white font-extrabold text-xl rounded-2xl animate-pulse-slow shadow-lg hover:shadow-cyan-500/40 transition-all uppercase tracking-tight mb-8">
                 Quero Garantir Minha Cópia do Guia
             </a>
 
@@ -286,26 +292,72 @@
         </div>
     </section>
 
-    <section class="py-24 px-4">
+<!-- 7ª SEÇÃO: PROVA SOCIAL (VERSÃO IMAGENS/PRINTS) -->
+    <section class="py-24 px-4 bg-slate-900/10">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tight">Quem já usa, aprova o método</h2>
+                <span class="text-cyan-400 text-xs font-bold tracking-[0.2em] uppercase">Resultados Reais</span>
+                <h2 class="text-3xl md:text-5xl font-black mt-2 uppercase tracking-tight">Quem já usa, aprova o método</h2>
+                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Prints de alunos que saíram do absoluto zero e garantiram a aprovação usando nossa engenharia de prompts.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-2xl">
-                    <div class="flex text-cyan-400 mb-4 text-xs tracking-widest">★★★★★</div>
-                    <p class="text-sm text-slate-300 italic mb-6 leading-relaxed">"Eu estava travada há 3 meses no referencial teórico. Com as engenharizações de prompts do Módulo 2 consegui cruzar os autores sem nenhuma dor de cabeça e montei o capítulo inteiro em um fim de semana."</p>
-                    <p class="font-bold text-white text-sm uppercase tracking-wide">— Mariana S., Graduanda de Direito</p>
+
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+                
+                <!-- PRINT 01 -->
+                <div class="relative group">
+                    <!-- Brilho de fundo no hover -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-violet-600 rounded-2xl blur opacity-20 group-hover:opacity-50 transition duration-500"></div>
+                    
+                    <div class="relative glass rounded-2xl overflow-hidden border border-slate-700/50">
+                        <!-- 
+                             PARA TROCAR A IMAGEM: 
+                             Substitua o 'src' abaixo pelo seu print (WhatsApp/E-mail/Instagram)
+                        -->
+                        <img 
+                            src="./provaSocial3.png" 
+                            alt="Depoimento Aluno 1" 
+                            class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <!-- Overlay sutil para manter o estilo dark -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent pointer-events-none"></div>
+                    </div>
                 </div>
-                <div class="glass p-8 rounded-2xl">
-                    <div class="flex text-cyan-400 mb-4 text-xs tracking-widest">★★★★★</div>
-                    <p class="text-sm text-slate-300 italic mb-6 leading-relaxed">"O bônus de anti-plágio e humanização de escrita vale o preço do e-book sozinho. Me deu a segurança necessária para submeter o relatório sem medo de falsos positivos nos softwares da faculdade."</p>
-                    <p class="font-bold text-white text-sm uppercase tracking-wide">— Ricardo M., Engenharia de Produção</p>
+
+                <!-- PRINT 02 -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-violet-600 rounded-2xl blur opacity-20 group-hover:opacity-50 transition duration-500"></div>
+                    
+                    <div class="relative glass rounded-2xl overflow-hidden border border-slate-700/50">
+                        <img 
+                            src="./provaSocial2.png" 
+                            alt="Depoimento Aluno 2" 
+                            class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent pointer-events-none"></div>
+                    </div>
                 </div>
-                <div class="glass p-8 rounded-2xl">
-                    <div class="flex text-cyan-400 mb-4 text-xs tracking-widest">★★★★★</div>
-                    <p class="text-sm text-slate-300 italic mb-6 leading-relaxed">"Faltavam pouquíssimos dias para o encerramento do prazo de entrega e eu não tinha nem os objetivos estruturados. Esse manual salvou meu semestre e meu diploma. Didática cirúrgica."</p>
-                    <p class="font-bold text-white text-sm uppercase tracking-wide">— Lucas F., Administração de Empresas</p>
+
+                <!-- PRINT 03 -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-violet-600 rounded-2xl blur opacity-20 group-hover:opacity-50 transition duration-500"></div>
+                    
+                    <div class="relative glass rounded-2xl overflow-hidden border border-slate-700/50">
+                        <img 
+                            src="./provaSocial1.png" 
+                            alt="Depoimento Aluno 3" 
+                            class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent pointer-events-none"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Legenda de Segurança -->
+            <div class="mt-12 text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/50 border border-slate-800">
+                    <span class="flex h-2 w-2 rounded-full bg-green-500"></span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400">Resultados verificados e autorizados por alunos</span>
                 </div>
             </div>
         </div>
